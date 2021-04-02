@@ -9,6 +9,16 @@ const App = () => {
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
+  const clearInputs = () => {
+    setUser("");
+    setPassword("");
+  };
+
+  const clearErrors = () => {
+    setPasswordError("");
+    setEmailError("");
+  };
+
   const handleLogin = () => {
     fire
       .auth()
